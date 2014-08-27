@@ -3,29 +3,42 @@
 	<title>oba app</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
-	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
-	<meta name="viewport" content="user-scalable=no" />
+	<meta name="viewport" content="user-scalable=no,initial-scale=1.3" />
 </head>
 <body>
 	<div class="wrapper">
 		<div class="header">
-			<h1 class="question-nr">Vraag <span id="question-nr">1</span></h1>
+			<h1 class="question-nr">Vraag <span id="vraag-nr">1</span></h1>
 		</div>
 		<div class="content">
 			<script>
 	$(function(){
 		var count = 0;
 		var points = 0;
-	  // To attach Backstrech as the body's background
-	  $.backstretch("stappenBG.png");
 
 	  $(".antwoord").on('click', function(){
 	  	count++;
+
+
+	  	/*if (count == 1) {
+	  		$("antwoord2").on('click', function(){
+	  			points++;
+	  			alert
+	  		})
+	  	};*/
+
 //	  	if($(this).hasClass('antwoord2')) nee++;
 //	  	if($(this).hasClass('antwoord1')) ja++;
 
-	  	$(".head, .text").html('');
+		if(count==1 && $(this).hasClass('antwoord1')) points++;
+		if(count==2 && $(this).hasClass('antwoord2')) points++;
+		if(count==3 && $(this).hasClass('antwoord3')) points++;
+		if(count==4 && $(this).hasClass('antwoord1')) points++;
+		if(count==5 && $(this).hasClass('antwoord2')) points++;
+		if(count==6 && $(this).hasClass('antwoord3')) points++;
 
+
+	  	$(".head, .text").html('');
 	  	
 	  	if(count == 1)
 	  	{
@@ -33,6 +46,7 @@
 		  	$(".antwoord1 .text").html('Over de tweede wereld oorlog.');
 		  	$(".antwoord2 .text").html('Over de eerste wereld oorlog.');
 		  	$(".antwoord3 .text").html('Over de koude oorlog.');
+		  	$("#vraag-nr .text").html(count);
 		  	$("#progress").animate({"width": "0%"});
 	  	}if(count == 2)
 	  	{
@@ -40,6 +54,7 @@
 		  	$(".antwoord1 .text").html('Boeken');
 		  	$(".antwoord2 .text").html('Games');
 		  	$(".antwoord3 .text").html('Films');
+		  	$("#vraag-nr .text").html(count);
 		  	$("#progress").animate({"width": "10%"});
 	  	}
 	  	if(count == 3)
@@ -48,58 +63,69 @@
 		  	$(".antwoord1 .text").html('Strips');
 		  	$(".antwoord2 .text").html('Kunstwerk');
 		  	$(".antwoord3 .text").html('De cirkels');
+		  	$("#vraag-nr .text").html(count);
 		  	$("#progress").animate({"width": "20%"});
 	  	}
 	  	if(count == 4)
 	  	{
-		  	$(".head").html('');
-		  	$(".antwoord1 .text").html('');
-		  	$(".antwoord2 .text").html('');
-		  	$(".antwoord3 .text").html('');
+		  	$(".head").html('Wat voor soort boeken vind de op verdieping 4?');
+		  	$(".antwoord1 .text").html('Kookboeken');
+		  	$(".antwoord2 .text").html('Kinderboeken');
+		  	$(".antwoord3 .text").html('Kunstboeken');
+		  	$("#vraag-nr .text").html(count);
 		  	$("#progress").animate({"width": "30%"});
 	  	}
 	  	if(count == 5)
 	  	{
-		  	$(".head").html('');
-		  	$(".antwoord1 .text").html('');
-		  	$(".antwoord2 .text").html('');
-		  	$(".antwoord3 .text").html('');
+		  	$(".head").html('Als je een boek wilt lenen hoe doe je dat dan?');
+		  	$(".antwoord1 .text").html('Bij de receptie');
+		  	$(".antwoord2 .text").html('Vragen aan en werknemer');
+		  	$(".antwoord3 .text").html('Bij een computer');
+		  	$("#vraag-nr .text").html(count);
 		  	$("#progress").animate({"width": "40%"});
 	  	}
 	  	if(count == 6)
 	  	{
-		  	$(".head").html('');
-		  	$(".antwoord1 .text").html('');
-		  	$(".antwoord2 .text").html('');
-		  	$(".antwoord3 .text").html('');
+		  	$(".head").html('Waar zijn de stilte ruimtes?');
+		  	$(".antwoord1 .text").html('Verdieping 1');
+		  	$(".antwoord2 .text").html('Verdieping 2');
+		  	$(".antwoord3 .text").html('Verdieping 3');
 		  	$("#progress").animate({"width": "50%"});
 	  	}
 	  	if(count == 7)
 	  	{
-		  	$(".head").html('');
-		  	$(".antwoord1 .text").html('');
-		  	$(".antwoord2 .text").html('');
-		  	$(".antwoord3 .text").html('');
+		  	$(".head").html('Je ziet veel computers staan, waarvoor zijn die computers bedoeld?');
+		  	$(".antwoord1 .text").html('Om boeken te vinden');
+		  	$(".antwoord2 .text").html('Om informatie over die bibliotheek te vinden');
+		  	$(".antwoord3 .text").html('Om te internetten');
 		  	$("#progress").animate({"width": "60%"});
 	  	}
 	  	if(count == 8)
 	  	{
-		  	$(".head").html('');
-		  	$(".antwoord1 .text").html('');
-		  	$(".antwoord2 .text").html('');
-		  	$(".antwoord3 .text").html('');
+		  	$(".head").html('Hoe oud is dit de bibliotheek');
+		  	$(".antwoord1 .text").html('100 jaar');
+		  	$(".antwoord2 .text").html('50 jaar');
+		  	$(".antwoord3 .text").html('25 jaar');
 		  	$("#progress").animate({"width": "70%"});
 	  	}
 	  	if(count == 9)
 	  	{
-		  	$(".head").html('');
-		  	$(".antwoord1 .text").html('');
-		  	$(".antwoord2 .text").html('');
-		  	$(".antwoord3 .text").html('');
+		  	$(".head").html('Ga naar de bovenste verdieping wat vind je daar');
+		  	$(".antwoord1 .text").html('Een restaurant');
+		  	$(".antwoord2 .text").html('een zit plaats');
+		  	$(".antwoord3 .text").html('een plek om boeken te lezen');
 		  	$("#progress").animate({"width": "80%"});
 	  	}
+	  	if(count == 10)
+	  	{
+		  	$(".head").html('Hoeveel boeken denk je dat deze bibliotheek heeft');
+		  	$(".antwoord1 .text").html('1.000.000');
+		  	$(".antwoord2 .text").html('500.000');
+		  	$(".antwoord3 .text").html('300.00');
+		  	$("#progress").animate({"width": "90%"});
+	  	}
 	  	
-	  	else if(count >= 10){ 
+	  	else if(count >= 11){ 
 	  		$(".head").html('Je bent klaar!');
 		  	$("#progress").animate({"width": "100%"});
 	  		if(ja < nee)
@@ -115,6 +141,8 @@
 		  		}
 	  	}
 
+	  	console.log("count: " + count + " || points: " + points);
+
 	  })
 	});
 
@@ -122,7 +150,7 @@
 		<div class="question"><span class="head">Welkom</span></div>
 	<div class="antwoord1 antwoord"><span class="text">Start</span></div>
 	<div class="antwoord2 antwoord"><span class="text"></span></div>
-	<div class="antwoord32 antwoord"><span class="text"></span></div>
+	<div class="antwoord3 antwoord"><span class="text"></span></div>
 
 	<div id="progressBAR"><div id="progress"></div></div>
 		</div>
