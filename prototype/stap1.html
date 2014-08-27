@@ -1,19 +1,9 @@
 <html>
 <head>
-	<title>oba app</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<title>Stap 1</title>
 	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
-	<meta name="viewport" content="user-scalable=no" />
-	<script type="text/javascript" href="js/script.js"></script>
-</head>
-<body>
-	<div class="wrapper">
-		<div class="header">
-			<h1 class="question-nr">Vraag <span id="question-nr">1</span></h1>
-		</div>
-		<div class="content">
-			<script>
+	<script>
 	$(function(){
 		var count = 0;
 		var ja = 0;
@@ -34,14 +24,12 @@
 		  	$(".head").html('Hoeveel uur per dag zit je?');
 		  	$(".antwoord1 .text").html(' < 5 uur');
 		  	$(".antwoord2 .text").html(' > 5 uur');
-		  	$(".antwoord2 .text").html(' > 5 uur');
 		  	$("#progress").animate({"width": "12.5%"});
 	  	}
 	  	else if(count == 2)
 	  	{
 	  		$(".head").html('Hoeveel uur per dag sport je?');
 		  	$(".antwoord1 .text").html(' < 1 uur');
-		  	$(".antwoord2 .text").html(' > 1 uur');	
 		  	$(".antwoord2 .text").html(' > 1 uur');	
 		  	$("#progress").animate({"width": "25%"});
 	  	}
@@ -50,14 +38,12 @@
 	  		$(".head").html('Hoeveel KG weeg je?');
 		  	$(".antwoord1 .text").html(' < 70 kg');
 		  	$(".antwoord2 .text").html(' > 70 kg');
-		  	$(".antwoord2 .text").html(' > 70 kg');
 		  	$("#progress").animate({"width": "37.5%"});
 	  	}
 	  	else if(count == 4)
 	  	{
 	  		$(".head").html('Heb je ons ooit bezocht?');
 		  	$(".antwoord1 .text").html('JA');
-		  	$(".antwoord2 .text").html('NEE');
 		  	$(".antwoord2 .text").html('NEE');
 		  	$("#progress").animate({"width": "50%"});
 	  	}
@@ -66,7 +52,6 @@
 	  		$(".head").html('Heb je vaak rug klachten?');
 		  	$(".antwoord1 .text").html('Ja');
 		  	$(".antwoord2 .text").html('Nee');
-		  	$(".antwoord2 .text").html('Nee');
 		  	$("#progress").animate({"width": "62.5%"});
 	  	}
 	  	else if(count == 6)
@@ -74,14 +59,12 @@
 	  		$(".head").html('Heb je steun zolen?');
 		  	$(".antwoord1 .text").html('JA');
 		  	$(".antwoord2 .text").html('NEE');
-		  	$(".antwoord2 .text").html('NEE');
 		  	$("#progress").animate({"width": "75%"});
 	  	}
 	  	else if(count == 7)
 	  	{
 	  		$(".head").html('Heb je airmax?');
 		  	$(".antwoord1 .text").html('JA');
-		  	$(".antwoord2 .text").html('NEE');
 		  	$(".antwoord2 .text").html('NEE');
 		  	$("#progress").animate({"width": "87.5%"});
 	  	}
@@ -105,13 +88,14 @@
 	});
 
 	</script>
-		<div class="question"><span class="head">Ben je onder de 18</span></div>
-	<div class="antwoord1 antwoord"><span class="text">antwoord1</span></div>
-	<div class="antwoord2 antwoord"><span class="text">antwoord2</span></div>
-	<div class="antwoord32 antwoord"><span class="text">antwoord3</span></div>
+		<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+	<div class="question"><span class="head">Ben je onder de 18</span></div>
+	<div class="antwoord1 antwoord"><span class="text">Ja</span></div>
+	<div class="antwoord2 antwoord"><span class="text">NEE</span></div>
 
 	<div id="progressBAR"><div id="progress"></div></div>
-		</div>
-	</div>
 </body>
 </html>
