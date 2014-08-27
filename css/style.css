@@ -9,7 +9,7 @@
 }
 
 .header{
-	height: 200px;
+	height: 100px;
 	background-color: #f39c12;
 	text-align: center;
 }
@@ -23,7 +23,7 @@
 }
 
 .question{
-	font-size: 80px;
+	font-size: 20px;
 }
 #progressBAR{
 	width: 100%;

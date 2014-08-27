@@ -5,7 +5,6 @@
 	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
 	<meta name="viewport" content="user-scalable=no" />
-	<script type="text/javascript" href="js/script.js"></script>
 </head>
 <body>
 	<div class="wrapper">
@@ -16,76 +15,91 @@
 			<script>
 	$(function(){
 		var count = 0;
-		var ja = 0;
-		var nee = 0;
+		var points = 0;
 	  // To attach Backstrech as the body's background
 	  $.backstretch("stappenBG.png");
 
 	  $(".antwoord").on('click', function(){
 	  	count++;
-	  	if($(this).hasClass('antwoord2')) nee++;
-	  	if($(this).hasClass('antwoord1')) ja++;
-
+//	  	if($(this).hasClass('antwoord2')) nee++;
+//	  	if($(this).hasClass('antwoord1')) ja++;
 
 	  	$(".head, .text").html('');
 
+	  	
 	  	if(count == 1)
 	  	{
-		  	$(".head").html('Hoeveel uur per dag zit je?');
-		  	$(".antwoord1 .text").html(' < 5 uur');
-		  	$(".antwoord2 .text").html(' > 5 uur');
-		  	$(".antwoord2 .text").html(' > 5 uur');
-		  	$("#progress").animate({"width": "12.5%"});
-	  	}
-	  	else if(count == 2)
+		  	$(".head").html('Ga naar de multimedia afdeling. Ga naar de grootste cirkel waar een film zich afspeelt.Waar ging deze film over?');
+		  	$(".antwoord1 .text").html('Over de tweede wereld oorlog.');
+		  	$(".antwoord2 .text").html('Over de eerste wereld oorlog.');
+		  	$(".antwoord3 .text").html('Over de koude oorlog.');
+		  	$("#progress").animate({"width": "0%"});
+	  	}if(count == 2)
 	  	{
-	  		$(".head").html('Hoeveel uur per dag sport je?');
-		  	$(".antwoord1 .text").html(' < 1 uur');
-		  	$(".antwoord2 .text").html(' > 1 uur');	
-		  	$(".antwoord2 .text").html(' > 1 uur');	
-		  	$("#progress").animate({"width": "25%"});
+		  	$(".head").html('Welke artikelen vind je niet op de Multimedia afdeling?');
+		  	$(".antwoord1 .text").html('Boeken');
+		  	$(".antwoord2 .text").html('Games');
+		  	$(".antwoord3 .text").html('Films');
+		  	$("#progress").animate({"width": "10%"});
 	  	}
-	  	else if(count == 3)
+	  	if(count == 3)
 	  	{
-	  		$(".head").html('Hoeveel KG weeg je?');
-		  	$(".antwoord1 .text").html(' < 70 kg');
-		  	$(".antwoord2 .text").html(' > 70 kg');
-		  	$(".antwoord2 .text").html(' > 70 kg');
-		  	$("#progress").animate({"width": "37.5%"});
+		  	$(".head").html('Ga naar de jeugd afdeling wat is bijzonder op deze afdeling?');
+		  	$(".antwoord1 .text").html('');
+		  	$(".antwoord2 .text").html('');
+		  	$(".antwoord3 .text").html('');
+		  	$("#progress").animate({"width": "20%"});
 	  	}
-	  	else if(count == 4)
+	  	if(count == 4)
 	  	{
-	  		$(".head").html('Heb je ons ooit bezocht?');
-		  	$(".antwoord1 .text").html('JA');
-		  	$(".antwoord2 .text").html('NEE');
-		  	$(".antwoord2 .text").html('NEE');
+		  	$(".head").html('');
+		  	$(".antwoord1 .text").html('');
+		  	$(".antwoord2 .text").html('');
+		  	$(".antwoord3 .text").html('');
+		  	$("#progress").animate({"width": "30%"});
+	  	}
+	  	if(count == 5)
+	  	{
+		  	$(".head").html('');
+		  	$(".antwoord1 .text").html('');
+		  	$(".antwoord2 .text").html('');
+		  	$(".antwoord3 .text").html('');
+		  	$("#progress").animate({"width": "40%"});
+	  	}
+	  	if(count == 6)
+	  	{
+		  	$(".head").html('');
+		  	$(".antwoord1 .text").html('');
+		  	$(".antwoord2 .text").html('');
+		  	$(".antwoord3 .text").html('');
 		  	$("#progress").animate({"width": "50%"});
 	  	}
-	  	else if(count == 5)
+	  	if(count == 7)
 	  	{
-	  		$(".head").html('Heb je vaak rug klachten?');
-		  	$(".antwoord1 .text").html('Ja');
-		  	$(".antwoord2 .text").html('Nee');
-		  	$(".antwoord2 .text").html('Nee');
-		  	$("#progress").animate({"width": "62.5%"});
+		  	$(".head").html('');
+		  	$(".antwoord1 .text").html('');
+		  	$(".antwoord2 .text").html('');
+		  	$(".antwoord3 .text").html('');
+		  	$("#progress").animate({"width": "60%"});
 	  	}
-	  	else if(count == 6)
+	  	if(count == 8)
 	  	{
-	  		$(".head").html('Heb je steun zolen?');
-		  	$(".antwoord1 .text").html('JA');
-		  	$(".antwoord2 .text").html('NEE');
-		  	$(".antwoord2 .text").html('NEE');
-		  	$("#progress").animate({"width": "75%"});
+		  	$(".head").html('');
+		  	$(".antwoord1 .text").html('');
+		  	$(".antwoord2 .text").html('');
+		  	$(".antwoord3 .text").html('');
+		  	$("#progress").animate({"width": "70%"});
 	  	}
-	  	else if(count == 7)
+	  	if(count == 9)
 	  	{
-	  		$(".head").html('Heb je airmax?');
-		  	$(".antwoord1 .text").html('JA');
-		  	$(".antwoord2 .text").html('NEE');
-		  	$(".antwoord2 .text").html('NEE');
-		  	$("#progress").animate({"width": "87.5%"});
+		  	$(".head").html('');
+		  	$(".antwoord1 .text").html('');
+		  	$(".antwoord2 .text").html('');
+		  	$(".antwoord3 .text").html('');
+		  	$("#progress").animate({"width": "80%"});
 	  	}
-	  	else if(count >= 8){ 
+	  	
+	  	else if(count >= 10){ 
 	  		$(".head").html('Je bent klaar!');
 		  	$("#progress").animate({"width": "100%"});
 	  		if(ja < nee)
@@ -105,10 +119,10 @@
 	});
 
 	</script>
-		<div class="question"><span class="head">Ben je onder de 18</span></div>
-	<div class="antwoord1 antwoord"><span class="text">antwoord1</span></div>
-	<div class="antwoord2 antwoord"><span class="text">antwoord2</span></div>
-	<div class="antwoord32 antwoord"><span class="text">antwoord3</span></div>
+		<div class="question"><span class="head">Welkom</span></div>
+	<div class="antwoord1 antwoord"><span class="text">Start</span></div>
+	<div class="antwoord2 antwoord"><span class="text"></span></div>
+	<div class="antwoord32 antwoord"><span class="text"></span></div>
 
 	<div id="progressBAR"><div id="progress"></div></div>
 		</div>
