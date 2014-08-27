@@ -30,12 +30,7 @@
 //	  	if($(this).hasClass('antwoord2')) nee++;
 //	  	if($(this).hasClass('antwoord1')) ja++;
 
-		if(count==1 && $(this).hasClass('antwoord1')) points++;
-		if(count==2 && $(this).hasClass('antwoord2')) points++;
-		if(count==3 && $(this).hasClass('antwoord3')) points++;
-		if(count==4 && $(this).hasClass('antwoord1')) points++;
-		if(count==5 && $(this).hasClass('antwoord2')) points++;
-		if(count==6 && $(this).hasClass('antwoord3')) points++;
+
 
 
 	  	$(".head, .text").html('');
@@ -48,7 +43,9 @@
 		  	$(".antwoord3 .text").html('Over de koude oorlog.');
 		  	$("#vraag-nr .text").html(count);
 		  	$("#progress").animate({"width": "0%"});
-	  	}if(count == 2)
+	  	}
+		if(count==1 && $(this).hasClass('antwoord1')) points++;
+	  	if(count == 2)
 	  	{
 		  	$(".head").html('Welke artikelen vind je niet op de Multimedia afdeling?');
 		  	$(".antwoord1 .text").html('Boeken');
@@ -57,6 +54,7 @@
 		  	$("#vraag-nr .text").html(count);
 		  	$("#progress").animate({"width": "10%"});
 	  	}
+		if(count==2 && $(this).hasClass('antwoord1')) points++;
 	  	if(count == 3)
 	  	{
 		  	$(".head").html('Ga naar de jeugd afdeling wat is bijzonder op deze afdeling?');
@@ -66,6 +64,7 @@
 		  	$("#vraag-nr .text").html(count);
 		  	$("#progress").animate({"width": "20%"});
 	  	}
+		if(count==3 && $(this).hasClass('antwoord2')) points++;
 	  	if(count == 4)
 	  	{
 		  	$(".head").html('Wat voor soort boeken vind de op verdieping 4?');
@@ -75,6 +74,7 @@
 		  	$("#vraag-nr .text").html(count);
 		  	$("#progress").animate({"width": "30%"});
 	  	}
+		if(count==4 && $(this).hasClass('antwoord1')) points++;
 	  	if(count == 5)
 	  	{
 		  	$(".head").html('Als je een boek wilt lenen hoe doe je dat dan?');
@@ -84,6 +84,7 @@
 		  	$("#vraag-nr .text").html(count);
 		  	$("#progress").animate({"width": "40%"});
 	  	}
+		if(count==5 && $(this).hasClass('antwoord3')) points++;
 	  	if(count == 6)
 	  	{
 		  	$(".head").html('Waar zijn de stilte ruimtes?');
@@ -92,6 +93,7 @@
 		  	$(".antwoord3 .text").html('Verdieping 3');
 		  	$("#progress").animate({"width": "50%"});
 	  	}
+		if(count==6 && $(this).hasClass('antwoord2')) points++;
 	  	if(count == 7)
 	  	{
 		  	$(".head").html('Je ziet veel computers staan, waarvoor zijn die computers bedoeld?');
@@ -100,6 +102,7 @@
 		  	$(".antwoord3 .text").html('Om te internetten');
 		  	$("#progress").animate({"width": "60%"});
 	  	}
+		if(count==7 && $(this).hasClass('antwoord1')) points++;
 	  	if(count == 8)
 	  	{
 		  	$(".head").html('Hoe oud is dit de bibliotheek');
@@ -108,6 +111,7 @@
 		  	$(".antwoord3 .text").html('25 jaar');
 		  	$("#progress").animate({"width": "70%"});
 	  	}
+		if(count==8 && $(this).hasClass('antwoord3')) points++;
 	  	if(count == 9)
 	  	{
 		  	$(".head").html('Ga naar de bovenste verdieping wat vind je daar');
@@ -116,6 +120,7 @@
 		  	$(".antwoord3 .text").html('een plek om boeken te lezen');
 		  	$("#progress").animate({"width": "80%"});
 	  	}
+		if(count==9 && $(this).hasClass('antwoord1')) points++;
 	  	if(count == 10)
 	  	{
 		  	$(".head").html('Hoeveel boeken denk je dat deze bibliotheek heeft');
@@ -124,6 +129,7 @@
 		  	$(".antwoord3 .text").html('300.00');
 		  	$("#progress").animate({"width": "90%"});
 	  	}
+		if(count==10 && $(this).hasClass('antwoord3')) points++;
 	  	
 	  	else if(count >= 11){ 
 	  		$(".head").html('Je bent klaar!');
